@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ProjectMassway">
+    <output-path>$PROJECT_DIR$/out/artifacts/ProjectMassway</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Massway.ProjectMassway" />
+        <option name="description" value="" />
+        <option name="height" value="900" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="exe" />
+        <option name="title" value="ProjectMassway" />
+        <option name="vendor" value="" />
+        <option name="version" value="1.0" />
+        <option name="width" value="1600" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="ProjectMassway.jar">
+        <element id="module-output" name="ProjectMassway" />
+      </element>
+    </root>
+  </artifact>
+</component>
