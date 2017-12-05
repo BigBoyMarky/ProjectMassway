@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.paint.Color?>
+<SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Massway.SaleController">
+<items>
+    <AnchorPane>
+        <children>
+            <Label alignment="CENTER" layoutX="42.0" layoutY="20.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Add" textAlignment="CENTER" wrapText="false">
+                <font>
+                    <Font size="18.0" fx:id="x12" />
+                </font>
+                <textFill>
+                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x22" />
+                </textFill>
+            </Label>
+            <Label layoutX="53.0" layoutY="51.0" text="Client Number" />
+            <TextField layoutX="53.0" layoutY="70.0" prefWidth="250.0" />
+            <Label layoutX="53.0" layoutY="103.0" text="Client" />
+            <TextField layoutX="53.0" layoutY="121.0" prefWidth="250.0" />
+            <Label layoutX="53.0" layoutY="155.0" text="Country" />
+            <TextField layoutX="53.0" layoutY="173.0" prefWidth="250.0" />
+            <Label layoutX="53.0" layoutY="207.0" text="Address" />
+            <TextField layoutX="53.0" layoutY="225.0" prefWidth="250.0" />
+            <Label layoutX="57.0" layoutY="260.0" text="Date" />
+            <TextField layoutX="57.0" layoutY="278.0" prefWidth="250.0" />
+            <Label layoutX="57.0" layoutY="314.0" text="Item Number" />
+            <TextField layoutX="57.0" layoutY="332.0" prefWidth="250.0" />
+            <Label layoutX="53.0" layoutY="365.0" text="Sale Quantity" />
+            <TextField layoutX="53.0" layoutY="383.0" prefWidth="250.0" />
+            <Label layoutX="58.0" layoutY="419.0" text="Unit" />
+            <ChoiceBox layoutX="56.0" layoutY="436.0" prefWidth="250.0" />
+            <Label layoutX="57.0" layoutY="463.0" text="Description" />
+            <TextArea layoutX="53.0" layoutY="495.0" prefHeight="89.0" prefWidth="250.0" />
+            <Label layoutX="57.0" layoutY="596.0" text="US $ Unit" />
+            <TextField layoutX="57.0" layoutY="614.0" prefWidth="250.0" />
+            <Label layoutX="57.0" layoutY="651.0" text="Total US $" />
+            <TextField layoutX="57.0" layoutY="669.0" prefWidth="250.0" />
+            <Label layoutX="57.0" layoutY="697.0" text="Payment" />
+            <TextField layoutX="57.0" layoutY="715.0" prefWidth="250.0" />
+            <Label layoutX="57.0" layoutY="747.0" text="Debt" />
+            <TextField layoutX="57.0" layoutY="765.0" prefWidth="250.0" />
+            <Button layoutX="271.0" layoutY="805.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Add" />
+        </children>
+    </AnchorPane>
+    <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+        <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="846.0" prefWidth="1195.0">
+                <children>
+                    <Label alignment="CENTER" font="$x12" layoutX="14.0" layoutY="14.0" style="&#10;" text="Sales" textAlignment="CENTER" textFill="$x22" wrapText="false" />
+                </children>
+            </AnchorPane>
+        </content>
+    </ScrollPane>
+</items>
+</SplitPane>

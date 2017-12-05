@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.control.cell.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.VBox?>
 <VBox prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Massway.ProjectMassway">
   <children>
     <MenuBar VBox.vgrow="NEVER">
@@ -55,186 +52,18 @@
             </Tab>-->
           <Tab text="Inventory">
                <content>
-                <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="900.0" prefWidth="1600.0">
-                  <items>
-                    <AnchorPane prefHeight="846.0" prefWidth="300.0">
-                      <children>
-                        <Label alignment="CENTER" layoutX="35.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Add" textAlignment="CENTER" wrapText="false">
-                          <font>
-                            <Font size="18.0" fx:id="x1" />
-                          </font>
-                          <textFill>
-                            <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
-                          </textFill>
-                        </Label>
-                              <Label layoutX="44.0" layoutY="58.0" text="Item Number" />
-                              <TextField layoutX="49.0" layoutY="79.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Label layoutX="45.0" layoutY="110.0" text="Origin" />
-                              <TextField layoutX="49.0" layoutY="129.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Label layoutX="44.0" layoutY="156.0" text="Entry Date" />
-                              <TextField layoutX="49.0" layoutY="173.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Label layoutX="44.0" layoutY="208.0" text="Quantity Imported" />
-                              <TextField layoutX="49.0" layoutY="226.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Label layoutX="49.0" layoutY="262.0" text="Unit" />
-                              <ChoiceBox layoutX="50.0" layoutY="287.0" prefWidth="150.0" />
-                              <Label layoutX="48.0" layoutY="332.0" text="Description" />
-                              <TextArea layoutX="49.0" layoutY="350.0" prefHeight="75.0" prefWidth="250.0" />
-                              <Label layoutX="48.0" layoutY="440.0" text="Unit Cost" />
-                              <TextField layoutX="49.0" layoutY="461.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Label layoutX="48.0" layoutY="496.0" text="Total Cost" />
-                              <TextField layoutX="49.0" layoutY="515.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Label layoutX="48.0" layoutY="549.0" text="Product Photo" />
-                              <Button layoutX="46.0" layoutY="577.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Upload Photo" />
-                              <Label layoutX="49.0" layoutY="612.0" text="Notes" />
-                              <TextArea layoutX="45.0" layoutY="629.0" prefHeight="75.0" prefWidth="250.0" />
-                              <Label layoutX="45.0" layoutY="712.0" text="Sale Price" />
-                              <TextField layoutX="46.0" layoutY="731.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Label layoutX="45.0" layoutY="765.0" text="Zeta Number" />
-                              <TextField layoutX="46.0" layoutY="784.0" prefHeight="25.0" prefWidth="250.0" />
-                              <Button layoutX="238.0" layoutY="816.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Add" />
-                      </children>
-                    </AnchorPane>
-                    <ScrollPane prefHeight="846.0" prefWidth="1080.0">
-                      <content>
-                        <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="844.0" prefWidth="1194.0">
-                          <children>
-                            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Inventory" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                          </children>
-                        </AnchorPane>
-                      </content>
-                    </ScrollPane>
-                  </items>
-                </SplitPane>
+                   <fx:include fx:id="" source="inventory.fxml"></fx:include>
                </content>
             </Tab>
             <Tab text="Client">
                <content>
-                  <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0">
-                     <items>
-                        <AnchorPane>
-                           <children>
-                              <Label alignment="CENTER" layoutX="41.0" layoutY="28.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Add" textAlignment="CENTER" wrapText="false">
-                                 <font>
-                                    <Font size="18.0" fx:id="x11" />
-                                 </font>
-                                 <textFill>
-                                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x21" />
-                                 </textFill>
-                              </Label>
-                              <Label layoutX="49.0" layoutY="67.0" text="Client Number" />
-                              <TextField fx:id="clientNumber" layoutX="49.0" layoutY="84.0" prefWidth="250.0" />
-                              <Label layoutX="49.0" layoutY="118.0" text="Client Name" />
-                              <TextField fx:id="clientName" layoutX="49.0" layoutY="136.0" prefWidth="250.0" />
-                              <Label layoutX="49.0" layoutY="170.0" text="Country" />
-                              <TextField fx:id="clientCountry" layoutX="49.0" layoutY="188.0" prefWidth="250.0" />
-                              <Label layoutX="49.0" layoutY="222.0" text="Address" />
-                              <TextField fx:id="clientAddress" layoutX="49.0" layoutY="240.0" prefWidth="250.0" />
-                              <Label layoutX="49.0" layoutY="274.0" text="Telephone Number" />
-                              <TextField fx:id="clientTelephoneNumber" layoutX="49.0" layoutY="291.0" prefWidth="250.0" />
-                              <Button fx:id="addClientButton" layoutX="241.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleAddClientButtonAction" prefHeight="25.0" prefWidth="58.0" text="Add" />
-                           </children>
-                        </AnchorPane>
-                        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
-                           <content>
-                              <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="843.0" prefWidth="1194.0">
-                                 <children>
-                                    <Label alignment="CENTER" font="$x11" layoutX="14.0" layoutY="14.0" style="&#10;" text="Clients" textAlignment="CENTER" textFill="$x21" wrapText="false" />
-                                    <TableView fx:id="clientsTable" layoutX="14.0" layoutY="41.0" prefHeight="786.0" prefWidth="1165.0">
-                                      <columns>
-                                        <!--<TableColumn fx:id="clientsTableNumber" editable="false" prefWidth="107.0" text="Number" />
-                                        <TableColumn fx:id="clientsTableName" editable="false" prefWidth="124.0" text="Name" />
-                                        <TableColumn fx:id="clientsTableCountry" prefWidth="99.0" text="Country" />
-                                        <TableColumn fx:id="clientsTableAddress" prefWidth="224.0" text="Address" />
-                                        <TableColumn fx:id="clientsTableTelephoneNumber" minWidth="0.0" prefWidth="150.0" text="Telephone Number" />-->
-                                          <TableColumn prefWidth="107.0" text="Number">
-                                              <cellValueFactory>
-                                                  <PropertyValueFactory property="number" />
-                                              </cellValueFactory>
-                                          </TableColumn>
-                                          <TableColumn prefWidth="124.0" text="Name">
-                                              <cellValueFactory>
-                                                  <PropertyValueFactory property="name" />
-                                              </cellValueFactory>
-                                          </TableColumn>
-                                          <TableColumn prefWidth="99.0" text="Country">
-                                              <cellValueFactory>
-                                                  <PropertyValueFactory property="country" />
-                                              </cellValueFactory>
-                                          </TableColumn>
-                                          <TableColumn prefWidth="224.0" text="Address">
-                                              <cellValueFactory>
-                                                  <PropertyValueFactory property="address" />
-                                              </cellValueFactory>
-                                          </TableColumn>
-                                          <TableColumn prefWidth="150.0" text="Telephone Number">
-                                              <cellValueFactory>
-                                                  <PropertyValueFactory property="telephoneNumber" />
-                                              </cellValueFactory>
-                                          </TableColumn>
-                                      </columns>
-                                    </TableView>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </ScrollPane>
-                     </items>
-                  </SplitPane>
+                   <fx:include fx:id="" source="client.fxml"></fx:include>
+
                </content>
             </Tab>
             <Tab text="Sale">
                <content>
-                  <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0">
-                     <items>
-                        <AnchorPane>
-                           <children>
-                              <Label alignment="CENTER" layoutX="42.0" layoutY="20.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Add" textAlignment="CENTER" wrapText="false">
-                                 <font>
-                                    <Font size="18.0" fx:id="x12" />
-                                 </font>
-                                 <textFill>
-                                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x22" />
-                                 </textFill>
-                              </Label>
-                              <Label layoutX="53.0" layoutY="51.0" text="Client Number" />
-                              <TextField layoutX="53.0" layoutY="70.0" prefWidth="250.0" />
-                              <Label layoutX="53.0" layoutY="103.0" text="Client" />
-                              <TextField layoutX="53.0" layoutY="121.0" prefWidth="250.0" />
-                              <Label layoutX="53.0" layoutY="155.0" text="Country" />
-                              <TextField layoutX="53.0" layoutY="173.0" prefWidth="250.0" />
-                              <Label layoutX="53.0" layoutY="207.0" text="Address" />
-                              <TextField layoutX="53.0" layoutY="225.0" prefWidth="250.0" />
-                              <Label layoutX="57.0" layoutY="260.0" text="Date" />
-                              <TextField layoutX="57.0" layoutY="278.0" prefWidth="250.0" />
-                              <Label layoutX="57.0" layoutY="314.0" text="Item Number" />
-                              <TextField layoutX="57.0" layoutY="332.0" prefWidth="250.0" />
-                              <Label layoutX="53.0" layoutY="365.0" text="Sale Quantity" />
-                              <TextField layoutX="53.0" layoutY="383.0" prefWidth="250.0" />
-                              <Label layoutX="58.0" layoutY="419.0" text="Unit" />
-                              <ChoiceBox layoutX="56.0" layoutY="436.0" prefWidth="250.0" />
-                              <Label layoutX="57.0" layoutY="463.0" text="Description" />
-                              <TextArea layoutX="53.0" layoutY="495.0" prefHeight="89.0" prefWidth="250.0" />
-                              <Label layoutX="57.0" layoutY="596.0" text="US $ Unit" />
-                              <TextField layoutX="57.0" layoutY="614.0" prefWidth="250.0" />
-                              <Label layoutX="57.0" layoutY="651.0" text="Total US $" />
-                              <TextField layoutX="57.0" layoutY="669.0" prefWidth="250.0" />
-                              <Label layoutX="57.0" layoutY="697.0" text="Payment" />
-                              <TextField layoutX="57.0" layoutY="715.0" prefWidth="250.0" />
-                              <Label layoutX="57.0" layoutY="747.0" text="Debt" />
-                              <TextField layoutX="57.0" layoutY="765.0" prefWidth="250.0" />
-                              <Button layoutX="271.0" layoutY="805.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Add" />
-                           </children>
-                        </AnchorPane>
-                        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
-                           <content>
-                              <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="846.0" prefWidth="1195.0">
-                                 <children>
-                                    <Label alignment="CENTER" font="$x12" layoutX="14.0" layoutY="14.0" style="&#10;" text="Sales" textAlignment="CENTER" textFill="$x22" wrapText="false" />
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </ScrollPane>
-                     </items>
-                  </SplitPane>
+                  <fx:include fx:id="" source="sale.fxml"></fx:include>
                </content>
             </Tab>
         </tabs>
