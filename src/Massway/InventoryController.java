@@ -25,16 +25,16 @@ public class InventoryController {
     @FXML public void handleAddInventoryItemButtonAction(ActionEvent event) throws Exception {
         ObservableList<InventoryItem> inventoryItems = inventoryTable.getItems();
         InventoryItem item = new InventoryItem(addItemNumber.getText(),
-                addItemOrigin.getText(),
-                addItemEntryDate.getText(),
-                addItemQuantityImported.getText(),
-                addItemUnit.getValue().toString(),
-                addItemDescription.getText(),
-                addItemUnitCost.getText(),
-                addItemTotalCost.getText(),
-                addItemNotes.getText(),
-                addItemSalePrice.getText(),
-                addItemZetaNumber.getText());
+                                                addItemOrigin.getText(),
+                                                addItemEntryDate.getText(),
+                                                addItemQuantityImported.getText(),
+                                                addItemUnit.getValue().toString(),
+                                                addItemDescription.getText(),
+                                                addItemUnitCost.getText(),
+                                                addItemTotalCost.getText(),
+                                                addItemNotes.getText(),
+                                                addItemSalePrice.getText(),
+                                                addItemZetaNumber.getText());
         inventoryItems.add(item);
     }
 

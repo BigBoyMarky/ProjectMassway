@@ -4,17 +4,17 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class InventoryItem {
 
-    private SimpleStringProperty number;
-    private SimpleStringProperty origin;
-    private SimpleStringProperty entryDate;
-    private SimpleStringProperty quantityImported;
-    private SimpleStringProperty unit;
-    private SimpleStringProperty description;
-    private SimpleStringProperty unitCost;
-    private SimpleStringProperty totalCost;
-    private SimpleStringProperty notes;
-    private SimpleStringProperty salesPrice;
-    private SimpleStringProperty zetaNumber;
+    private SimpleStringProperty number = new SimpleStringProperty("");
+    private SimpleStringProperty origin = new SimpleStringProperty("");
+    private SimpleStringProperty entryDate = new SimpleStringProperty("");
+    private SimpleStringProperty quantityImported = new SimpleStringProperty("");
+    private SimpleStringProperty unit = new SimpleStringProperty("");
+    private SimpleStringProperty description = new SimpleStringProperty("");
+    private SimpleStringProperty unitCost = new SimpleStringProperty("");
+    private SimpleStringProperty totalCost = new SimpleStringProperty("");
+    private SimpleStringProperty notes = new SimpleStringProperty("");
+    private SimpleStringProperty salesPrice = new SimpleStringProperty("");
+    private SimpleStringProperty zetaNumber = new SimpleStringProperty("");
 
     public InventoryItem(String number, String origin, String entryDate, String quantityImported, String unit, String description, String unitCost, String totalCost, String notes, String salesPrice, String zetaNumber) {
         this.number.set(number);

@@ -54,7 +54,7 @@
                 <TextField fx:id="addItemSalePrice" layoutX="46.0" layoutY="731.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="45.0" layoutY="765.0" text="Zeta Number" />
                 <TextField fx:id="addItemZetaNumber" layoutX="46.0" layoutY="784.0" prefHeight="25.0" prefWidth="250.0" />
-                <Button layoutX="238.0" layoutY="816.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" onAction="#handleAddInventoryItemButtonAction" text="Add" />
+                <Button fx:id="addInventoryItemButton" layoutX="238.0" layoutY="816.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" onAction="#handleAddInventoryItemButtonAction" text="Add" />
             </children>
         </AnchorPane>
         <ScrollPane prefHeight="846.0" prefWidth="1080.0">
