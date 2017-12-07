@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Massway.InventoryController">
+<?import java.lang.String?>
+<SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Massway.InventoryController">
     <items>
         <AnchorPane prefHeight="846.0" prefWidth="300.0">
             <children>
@@ -24,30 +28,33 @@
                     </textFill>
                 </Label>
                 <Label layoutX="44.0" layoutY="58.0" text="Item Number" />
-                <TextField layoutX="49.0" layoutY="79.0" prefHeight="25.0" prefWidth="250.0" />
+                <TextField fx:id="addItemNumber" layoutX="49.0" layoutY="79.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="45.0" layoutY="110.0" text="Origin" />
-                <TextField layoutX="49.0" layoutY="129.0" prefHeight="25.0" prefWidth="250.0" />
+                <TextField fx:id="addItemOrigin" layoutX="49.0" layoutY="129.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="44.0" layoutY="156.0" text="Entry Date" />
-                <TextField layoutX="49.0" layoutY="173.0" prefHeight="25.0" prefWidth="250.0" />
+                <TextField fx:id="addItemEntryDate" layoutX="49.0" layoutY="173.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="44.0" layoutY="208.0" text="Quantity Imported" />
-                <TextField layoutX="49.0" layoutY="226.0" prefHeight="25.0" prefWidth="250.0" />
+                <TextField fx:id="addItemQuantityImported" layoutX="49.0" layoutY="226.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="49.0" layoutY="262.0" text="Unit" />
-                <ChoiceBox layoutX="50.0" layoutY="287.0" prefWidth="150.0" />
+                <ChoiceBox fx:id="addItemUnit" layoutX="50.0" layoutY="287.0" prefWidth="150.0">
+                    <String fx:value="PZ" />
+                    <String fx:value="DZ" />
+                </ChoiceBox>
                 <Label layoutX="48.0" layoutY="332.0" text="Description" />
-                <TextArea layoutX="49.0" layoutY="350.0" prefHeight="75.0" prefWidth="250.0" />
+                <TextArea fx:id="addItemDescription" layoutX="49.0" layoutY="350.0" prefHeight="75.0" prefWidth="250.0" />
                 <Label layoutX="48.0" layoutY="440.0" text="Unit Cost" />
-                <TextField layoutX="49.0" layoutY="461.0" prefHeight="25.0" prefWidth="250.0" />
+                <TextField fx:id="addItemUnitCost" layoutX="49.0" layoutY="461.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="48.0" layoutY="496.0" text="Total Cost" />
-                <TextField layoutX="49.0" layoutY="515.0" prefHeight="25.0" prefWidth="250.0" />
+                <TextField fx:id="addItemTotalCost" layoutX="49.0" layoutY="515.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="48.0" layoutY="549.0" text="Product Photo" />
-                <Button layoutX="46.0" layoutY="577.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Upload Photo" />
+                <Button fx:id="itemPhoto" layoutX="46.0" layoutY="577.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Upload Photo" />
                 <Label layoutX="49.0" layoutY="612.0" text="Notes" />
-                <TextArea layoutX="45.0" layoutY="629.0" prefHeight="75.0" prefWidth="250.0" />
+                <TextArea fx:id="addItemNotes" layoutX="45.0" layoutY="629.0" prefHeight="75.0" prefWidth="250.0" />
                 <Label layoutX="45.0" layoutY="712.0" text="Sale Price" />
-                <TextField layoutX="46.0" layoutY="731.0" prefHeight="25.0" prefWidth="250.0" />
+                <TextField fx:id="addItemSalePrice" layoutX="46.0" layoutY="731.0" prefHeight="25.0" prefWidth="250.0" />
                 <Label layoutX="45.0" layoutY="765.0" text="Zeta Number" />
-                <TextField layoutX="46.0" layoutY="784.0" prefHeight="25.0" prefWidth="250.0" />
-                <Button layoutX="238.0" layoutY="816.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Add" />
+                <TextField fx:id="addItemZetaNumber" layoutX="46.0" layoutY="784.0" prefHeight="25.0" prefWidth="250.0" />
+                <Button layoutX="238.0" layoutY="816.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" onAction="#handleAddInventoryItemButtonAction" text="Add" />
             </children>
         </AnchorPane>
         <ScrollPane prefHeight="846.0" prefWidth="1080.0">
@@ -55,6 +62,25 @@
                 <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="844.0" prefWidth="1194.0">
                     <children>
                         <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Inventory" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <TableView fx:id="inventoryTable" layoutX="12.0" layoutY="49.0" prefHeight="786.0" prefWidth="1165.0">
+                            <columns>
+                                <TableColumn prefWidth="195.0" text="Item Number">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="addItemNumber" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="127.0" text="Unit">
+                                    <cellValueFactory>
+                              <PropertyValueFactory property="addItemUnit" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="842.0" text="Description">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="addItemDescription" />
+                           </cellValueFactory>
+                        </TableColumn>
+                     </columns>
+                  </TableView>
                     </children>
                 </AnchorPane>
             </content>

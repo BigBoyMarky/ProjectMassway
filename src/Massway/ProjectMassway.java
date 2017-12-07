@@ -39,10 +39,4 @@ public class ProjectMassway extends Application {
         stage.show();
     }
 
-    @FXML public void handleAddClientButtonAction(ActionEvent event) throws Exception {
-        ObservableList<Client> clients = clientsTable.getItems();
-        Client client = new Client(clientNumber.getText(), clientName.getText(), clientCountry.getText(), clientAddress.getText(), clientTelephoneNumber.getText());
-        clients.add(client);
-    }
-
 }

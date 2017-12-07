@@ -13,7 +13,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 
-<SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Massway.ClientController">
+<SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Massway.ClientController">
     <items>
         <AnchorPane>
             <children>
@@ -40,7 +40,7 @@
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
             <content>
-                <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="843.0" prefWidth="1194.0">
+                <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="844.0" prefWidth="1194.0">
                     <children>
                         <Label alignment="CENTER" font="$x11" layoutX="14.0" layoutY="14.0" style="&#10;" text="Clients" textAlignment="CENTER" textFill="$x21" wrapText="false" />
                         <TableView fx:id="clientsTable" layoutX="14.0" layoutY="41.0" prefHeight="786.0" prefWidth="1165.0">
@@ -52,27 +52,27 @@
                                 <TableColumn fx:id="clientsTableTelephoneNumber" minWidth="0.0" prefWidth="150.0" text="Telephone Number" />-->
                                 <TableColumn prefWidth="107.0" text="Number">
                                     <cellValueFactory>
-                                        <PropertyValueFactory property="number" />
+                                        <PropertyValueFactory property="clientNumber" />
                                     </cellValueFactory>
                                 </TableColumn>
                                 <TableColumn prefWidth="124.0" text="Name">
                                     <cellValueFactory>
-                                        <PropertyValueFactory property="name" />
+                                        <PropertyValueFactory property="clientName" />
                                     </cellValueFactory>
                                 </TableColumn>
                                 <TableColumn prefWidth="99.0" text="Country">
                                     <cellValueFactory>
-                                        <PropertyValueFactory property="country" />
+                                        <PropertyValueFactory property="clientCountry" />
                                     </cellValueFactory>
                                 </TableColumn>
                                 <TableColumn prefWidth="224.0" text="Address">
                                     <cellValueFactory>
-                                        <PropertyValueFactory property="address" />
+                                        <PropertyValueFactory property="clientAddress" />
                                     </cellValueFactory>
                                 </TableColumn>
                                 <TableColumn prefWidth="150.0" text="Telephone Number">
                                     <cellValueFactory>
-                                        <PropertyValueFactory property="telephoneNumber" />
+                                        <PropertyValueFactory property="clientTelephoneNumber" />
                                     </cellValueFactory>
                                 </TableColumn>
                             </columns>
